@@ -10,7 +10,7 @@ body {
 /* ================= SCROLL REVEAL ================= */
 
 .reveal {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(40px);
   transition:
     opacity 0.9s ease,
