@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- CSS Property: viewport / responsive sizing -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CSS Grid + Tailwind</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-white">
+
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+
+  <!--
+    Tailwind: border-b
+    CSS Property: border-bottom
+
+    Tailwind: bg-slate-950
+    CSS Property: background-color
+
+    Tailwind: text-white
+    CSS Property: color
+  -->
+  <nav class="border-b border-slate-800 bg-slate-950 text-white">
+
+    <!--
+      Tailwind: max-w-6xl
+      CSS Property: max-width
+
+      Tailwind: mx-auto
+      CSS Property: margin-left: auto; margin-right: auto
+
+      Tailwind: flex
+      CSS Property: display: flex
+
+      Tailwind: items-center
+      CSS Property: align-items: center
+
+      Tailwind: justify-between
+      CSS Property: justify-content: space-between
+
+      Tailwind: px-6 / py-5
+      CSS Property: padding
+    -->
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+
+      <!--
+        Tailwind: text-xl
+        CSS Property: font-size
+
+        Tailwind: font-bold
+        CSS Property: font-weight
+      -->
+      <h1 class="text-xl font-bold">
+        CSS <span class="text-cyan-400">Grid</span>
+      </h1>
+
+
+      <!--
+        Tailwind: hidden
+        CSS Property: display: none
+
+        Tailwind: sm:flex
+        CSS Property: display: flex at small screen and above
+
+        Tailwind: gap-6
+        CSS Property: gap
+      -->
+      <div class="hidden gap-6 text-sm text-slate-300 sm:flex">
+
+        <a href="#grid" class="hover:text-cyan-400">
+          Grid
+        </a>
+
+        <a href="#properties" class="hover:text-cyan-400">
+          Properties
+        </a>
+
+      </div>
+
+    </div>
+  </nav>
+
+
+
+  <!-- =====================================================
+       HERO SECTION
+       ===================================================== -->
+
+  <header class="px-6 py-20">
+
+    <!--
+      Tailwind: max-w-4xl
+      CSS Property: max-width
+
+      Tailwind: mx-auto
+      CSS Property: margin: auto
+
+      Tailwind: text-center
+      CSS Property: text-align: center
+    -->
+    <div class="mx-auto max-w-4xl text-center">
+
+
+      <!--
+        Tailwind: mb-4
+        CSS Property: margin-bottom
+
+        Tailwind: uppercase
+        CSS Property: text-transform: uppercase
+
+        Tailwind: tracking-widest
+        CSS Property: letter-spacing
+      -->
+      <p class="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan-400">
+        Beginner Friendly
+      </p>
+
+
+      <!--
+        Tailwind: text-4xl
+        CSS Property: font-size
+
+        Tailwind: font-black
+        CSS Property: font-weight
+
+        Tailwind: tracking-tight
+        CSS Property: letter-spacing
+
+        Tailwind: sm:text-6xl
+        CSS Property: font-size on larger screens
+      -->
+      <h2 class="text-4xl font-black tracking-tight sm:text-6xl">
+        Learn CSS Grid
+      </h2>
+
+
+      <!--
+        Tailwind: mt-6
+        CSS Property: margin-top
+
+        Tailwind: max-w-2xl
+        CSS Property: max-width
+
+        Tailwind: leading-8
+        CSS Property: line-height
+      -->
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-400">
+        CSS Grid helps you create layouts using rows and columns.
+        It is one of the best tools for building modern web pages.
+      </p>
+
+    </div>
+  </header>
+
+
+
+  <!-- =====================================================
+       SECTION 1
+       WHAT IS CSS GRID?
+       ===================================================== -->
+
+  <section id="grid" class="px-6 py-16">
+
+    <div class="mx-auto max-w-6xl">
+
+      <!-- Section heading -->
+      <div class="mb-10">
+
+        <p class="mb-2 text-sm font-bold uppercase tracking-widest text-violet-400">
+          Section 01
+        </p>
+
+        <h2 class="text-3xl font-bold">
+          What is CSS Grid?
+        </h2>
+
+        <p class="mt-3 max-w-2xl text-slate-400">
+          Grid is a CSS layout system that organizes elements
+          into rows and columns.
+        </p>
+
+      </div>
+
+
+
+      <!-- =================================================
+           GRID DEMO
+           ================================================= -->
+
+      <!--
+        ⭐ IMPORTANT GRID PROPERTIES
+
+        Tailwind: grid
+        CSS: display: grid;
+
+        Tailwind: grid-cols-3
+        CSS: grid-template-columns: repeat(3, 1fr);
+
+        Tailwind: gap-4
+        CSS: gap: 1rem;
+
+        Tailwind: p-6
+        CSS: padding: 1.5rem;
+
+        Tailwind: rounded-2xl
+        CSS: border-radius
+
+        Tailwind: bg-slate-900
+        CSS: background-color
+      -->
+
+      <div class="grid grid-cols-3 gap-4 rounded-2xl border border-slate-800 bg-slate-900 p-6">
+
+
+        <!--
+          Tailwind: bg-red-500
+          CSS Property: background-color
+
+          Tailwind: p-8
+          CSS Property: padding
+
+          Tailwind: text-center
+          CSS Property: text-align
+        -->
+        <div class="rounded-xl bg-red-500 p-8 text-center font-bold">
+          Box 1
+        </div>
+
+
+        <!-- CSS: background-color -->
+        <div class="rounded-xl bg-violet-500 p-8 text-center font-bold">
+          Box 2
+        </div>
+
+
+        <!-- CSS: background-color -->
+        <div class="rounded-xl bg-emerald-500 p-8 text-center font-bold">
+          Box 3
+        </div>
+
+
+        <!-- CSS: background-color -->
+        <div class="rounded-xl bg-amber-500 p-8 text-center font-bold text-slate-950">
+          Box 4
+        </div>
+
+
+        <!-- CSS: background-color -->
+        <div class="rounded-xl bg-pink-500 p-8 text-center font-bold">
+          Box 5
+        </div>
+
+
+        <!-- CSS: background-color -->
+        <div class="rounded-xl bg-cyan-500 p-8 text-center font-bold text-slate-950">
+          Box 6
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           GRID PROPERTY EXPLANATIONS
+           ================================================= -->
+
+      <!--
+        Tailwind: grid
+        CSS: display: grid;
+
+        Tailwind: md:grid-cols-3
+        CSS: grid-template-columns: repeat(3, 1fr);
+        Only applies at medium screen size and above.
+
+        Tailwind: gap-5
+        CSS: gap: 1.25rem;
+      -->
+
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+
+
+        <!-- =================================================
+             PROPERTY 1
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+
+          <span class="rounded-lg bg-cyan-400/10 px-3 py-1 text-sm text-cyan-400">
+            01
+          </span>
+
+          <h3 class="mt-5 text-xl font-bold">
+            display
+          </h3>
+
+          <!--
+            CSS:
+            display: grid;
+
+            Tailwind:
+            grid
+          -->
+          <code class="mt-3 block rounded-lg bg-slate-950 p-3 text-sm text-cyan-300">
+            class="grid"
+          </code>
+
+          <p class="mt-4 text-sm text-slate-400">
+            Turns an element into a Grid container.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROPERTY 2
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+
+          <span class="rounded-lg bg-violet-400/10 px-3 py-1 text-sm text-violet-400">
+            02
+          </span>
+
+          <h3 class="mt-5 text-xl font-bold">
+            grid-template-columns
+          </h3>
+
+          <!--
+            CSS:
+            grid-template-columns: repeat(3, 1fr);
+
+            Tailwind:
+            grid-cols-3
+          -->
+          <code class="mt-3 block rounded-lg bg-slate-950 p-3 text-sm text-violet-300">
+            class="grid-cols-3"
+          </code>
+
+          <p class="mt-4 text-sm text-slate-400">
+            Creates three equal columns.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROPERTY 3
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+
+          <span class="rounded-lg bg-emerald-400/10 px-3 py-1 text-sm text-emerald-400">
+            03
+          </span>
+
+          <h3 class="mt-5 text-xl font-bold">
+            gap
+          </h3>
+
+          <!--
+            CSS:
+            gap: 1rem;
+
+            Tailwind:
+            gap-4
+          -->
+          <code class="mt-3 block rounded-lg bg-slate-950 p-3 text-sm text-emerald-300">
+            class="gap-4"
+          </code>
+
+          <p class="mt-4 text-sm text-slate-400">
+            Adds space between Grid items.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- =====================================================
+       SECTION 2
+       IMPORTANT GRID PROPERTIES
+       ===================================================== -->
+
+  <!--
+    Tailwind: border-y
+    CSS: border-top + border-bottom
+
+    Tailwind: bg-slate-900/50
+    CSS: background-color with transparency
+  -->
+
+  <section
+    id="properties"
+    class="border-y border-slate-800 bg-slate-900/50 px-6 py-16"
+  >
+
+    <div class="mx-auto max-w-6xl">
+
+      <div class="mb-10">
+
+        <p class="mb-2 text-sm font-bold uppercase tracking-widest text-pink-400">
+          Section 02
+        </p>
+
+        <h2 class="text-3xl font-bold">
+          Important Grid Properties
+        </h2>
+
+        <p class="mt-3 max-w-2xl text-slate-400">
+          Learn the most important Grid properties and their
+          Tailwind CSS equivalents.
+        </p>
+
+      </div>
+
+
+
+      <!--
+        ⭐ PROPERTY CARDS GRID
+
+        Tailwind: grid
+        CSS: display: grid;
+
+        Tailwind: gap-5
+        CSS: gap: 1.25rem;
+
+        Tailwind: sm:grid-cols-2
+        CSS: grid-template-columns: repeat(2, 1fr);
+
+        Tailwind: lg:grid-cols-3
+        CSS: grid-template-columns: repeat(3, 1fr);
+      -->
+
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+
+
+        <!-- =================================================
+             DISPLAY
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-cyan-400">
+            display
+          </h3>
+
+          <!--
+            CSS Property:
+            display: grid;
+
+            Tailwind:
+            grid
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            grid
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Enables Grid layout.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             COLUMNS
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-violet-400">
+            grid-template-columns
+          </h3>
+
+          <!--
+            CSS Property:
+            grid-template-columns
+
+            Example:
+            grid-template-columns: repeat(3, 1fr);
+
+            Tailwind:
+            grid-cols-3
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            grid-cols-3
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Controls the columns of the Grid.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ROWS
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-emerald-400">
+            grid-template-rows
+          </h3>
+
+          <!--
+            CSS Property:
+            grid-template-rows: repeat(2, 100px);
+
+            Tailwind:
+            grid-rows-2
+
+            Note:
+            grid-rows-2 creates 2 equal implicit/defined rows
+            depending on the layout.
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            grid-rows-2
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Controls Grid rows.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GAP
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-amber-400">
+            gap
+          </h3>
+
+          <!--
+            CSS Property:
+            gap: 16px;
+
+            Tailwind:
+            gap-4
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            gap-4
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Creates space between rows and columns.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GRID COLUMN / COLUMN SPAN
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-pink-400">
+            grid-column
+          </h3>
+
+          <!--
+            CSS Property:
+            grid-column: span 2;
+
+            Tailwind:
+            col-span-2
+
+            This makes the item occupy 2 columns.
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            col-span-2
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Makes an item span across two columns.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GRID ROW / ROW SPAN
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-blue-400">
+            grid-row
+          </h3>
+
+          <!--
+            CSS Property:
+            grid-row: span 2;
+
+            Tailwind:
+            row-span-2
+
+            This makes the item occupy 2 rows.
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            row-span-2
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Makes an item span across two rows.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             GRID AREAS
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-orange-400">
+            grid-template-areas
+          </h3>
+
+          <!--
+            CSS Property:
+            grid-template-areas
+
+            Example:
+
+            grid-template-areas:
+              "header header"
+              "sidebar main";
+
+            Tailwind does not have a simple default utility
+            for arbitrary named grid-template-areas.
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            grid-template-areas
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Creates named areas for a page layout.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ALIGN ITEMS
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-teal-400">
+            align-items
+          </h3>
+
+          <!--
+            CSS Property:
+            align-items: center;
+
+            Tailwind:
+            items-center
+
+            "items" in Tailwind controls align-items.
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            items-center
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Aligns items vertically inside their grid area.
+          </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             JUSTIFY ITEMS
+             ================================================= -->
+
+        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+
+          <h3 class="text-xl font-bold text-indigo-400">
+            justify-items
+          </h3>
+
+          <!--
+            CSS Property:
+            justify-items: center;
+
+            Tailwind:
+            justify-items-center
+
+            Controls horizontal alignment of Grid items.
+          -->
+
+          <code class="mt-3 block text-sm text-slate-300">
+            justify-items-center
+          </code>
+
+          <p class="mt-4 text-sm leading-6 text-slate-400">
+            Aligns items horizontally inside their grid area.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- =====================================================
+       CHEAT SHEET
+       ===================================================== -->
+
+  <section class="px-6 py-16">
+
+    <div class="mx-auto max-w-6xl">
+
+      <h2 class="mb-8 text-3xl font-bold">
+        CSS → Tailwind Cheat Sheet
+      </h2>
+
+
+      <!--
+        Tailwind: overflow-hidden
+        CSS Property: overflow: hidden;
+
+        Tailwind: rounded-2xl
+        CSS Property: border-radius
+      -->
+
+      <div class="overflow-hidden rounded-2xl border border-slate-800">
+
+        <table class="w-full text-left">
+
+          <!--
+            Tailwind: bg-slate-900
+            CSS Property: background-color
+
+            Tailwind: p-4
+            CSS Property: padding
+          -->
+
+          <thead class="bg-slate-900">
+            <tr>
+              <th class="p-4">CSS Property</th>
+              <th class="p-4">Tailwind Class</th>
+              <th class="p-4">Meaning</th>
+            </tr>
+          </thead>
+
+
+          <tbody class="divide-y divide-slate-800">
+
+
+            <!-- display -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                display: grid
+              </td>
+
+              <td class="p-4 font-mono text-sm text-cyan-400">
+                grid
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Enable Grid
+              </td>
+            </tr>
+
+
+            <!-- columns -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                grid-template-columns
+              </td>
+
+              <td class="p-4 font-mono text-sm text-violet-400">
+                grid-cols-3
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Create 3 columns
+              </td>
+            </tr>
+
+
+            <!-- gap -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                gap
+              </td>
+
+              <td class="p-4 font-mono text-sm text-emerald-400">
+                gap-4
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Space between items
+              </td>
+            </tr>
+
+
+            <!-- column span -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                grid-column: span 2
+              </td>
+
+              <td class="p-4 font-mono text-sm text-pink-400">
+                col-span-2
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Span 2 columns
+              </td>
+            </tr>
+
+
+            <!-- row span -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                grid-row: span 2
+              </td>
+
+              <td class="p-4 font-mono text-sm text-blue-400">
+                row-span-2
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Span 2 rows
+              </td>
+            </tr>
+
+
+            <!-- align -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                align-items: center
+              </td>
+
+              <td class="p-4 font-mono text-sm text-teal-400">
+                items-center
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Vertical alignment
+              </td>
+            </tr>
+
+
+            <!-- justify -->
+            <tr>
+              <td class="p-4 font-mono text-sm">
+                justify-items: center
+              </td>
+
+              <td class="p-4 font-mono text-sm text-indigo-400">
+                justify-items-center
+              </td>
+
+              <td class="p-4 text-slate-400">
+                Horizontal alignment
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+
+  <!--
+    Tailwind: border-t
+    CSS Property: border-top
+
+    Tailwind: text-center
+    CSS Property: text-align
+
+    Tailwind: py-8
+    CSS Property: padding-top + padding-bottom
+  -->
+
+  <footer class="border-t border-slate-800 px-6 py-8 text-center">
+
+    <p class="text-sm text-slate-500">
+      Practice CSS Grid • Learn • Build • Repeat
+    </p>
+
+  </footer>
+
+</body>
+</html>
